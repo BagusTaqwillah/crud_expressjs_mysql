@@ -1,0 +1,25 @@
+<%- include("../partial/head") %>
+<%- include('../partial/header') %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mt-3 p-3">
+                <h3><%= title %></h3>
+                <form action="/updateUser" method="post">
+                    <div class="form-group">
+                        <label for="">Nama</label>
+                        <input type="text" class="form-control" value="<%= user.nama %>" name="nama" required >
+                        <input type="hidden" class="form-control" value="<%= user.id_latihan %>" name="id_latihan" required >
+                    </div>
+                    <div class="form-group">
+                        <label for="">Umur</label>
+                        <input type="date" class="form-control" name="umur" required ">
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('../partial/footer')%>

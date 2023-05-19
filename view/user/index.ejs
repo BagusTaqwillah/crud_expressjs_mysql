@@ -1,0 +1,31 @@
+
+   
+    
+    <%- include("../partial/head") %>
+    <%- include("../partial/header") %>
+    <div class="jumbotron">
+        <div class="container mt-5">
+        <h2 class="display-4">Halaman Home User</h2>
+        <a href="addUser" class="btn btn-primary mb-3">Add user</a>
+        <table class="table table-bordered table-striped mb-5">
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Aksi</th>
+            </tr>
+            <% var i=1;user.forEach(function(user) { %>
+            <tr>
+                <td><%= i++ %></td>
+                <td><%=user.nama %></td>
+                <td>
+                    <a href="user/<%=user.id_latihan %>" class="btn btn-sm btn-danger">hapus</a>
+                    <a href="edit/<%=user.id_latihan %>" class="btn btn-sm btn-warning">edit</a>
+                </td>
+            </tr>
+            </tr>
+            <% }); %>
+        </table>
+    </div>
+    </div>
+    <%- include("../partial/footer") %>
+
